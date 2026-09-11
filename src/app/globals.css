@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-vazirmatn: "Vazirmatn", "Alan Sans", sans-serif;
+  }
+
+  html {
+    direction: rtl;
+    text-align: right;
+    scroll-behavior: smooth;
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, sans-serif;
+    line-height: 1.7;
+  }
+
+  /* تحسين وضبط الـ line-height للخط العربي في جميع العناوين والنصوص لمنع تداخل الحروف والنقاط */
+  h1 {
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, sans-serif;
+    line-height: 1.4 !important;
+  }
+
+  h2 {
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, sans-serif;
+    line-height: 1.45 !important;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, sans-serif;
+    line-height: 1.5 !important;
+  }
+
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-family: var(--font-vazirmatn), "Vazirmatn", "Alan Sans", system-ui, sans-serif;
+  }
+
+  /* English / Numbers Direction */
+  .dir-ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hide scrollbar for category horizontal scroll */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
